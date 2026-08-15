@@ -61,10 +61,8 @@
     </div>
 
     <script>
-        // छुपे हुए (Base64) लिंक को डिकोड करके खोलने का लॉजिक
         function openLink(encodedLink) {
             try {
-                // atob() फंक्शन Base64 कोड को वापस असली लिंक में बदल देता है
                 let decodedLink = atob(encodedLink);
                 window.open(decodedLink, '_blank');
             } catch (e) {

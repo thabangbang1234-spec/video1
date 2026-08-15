@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Watch</title>
+    <style>
+        body { display:flex; align-items:center; justify-content:center; min-height:100vh; background:#111; color:#fff; }
+        .watch-btn { padding:18px 28px; background:#ff4757; color:#fff; border-radius:8px; font-weight:bold; text-decoration:none; border:none; cursor:pointer; }
+        .watch-btn:hover { background:#ff6b81; }
+    </style>
+</head>
+<body>
+    <button class="watch-btn" onclick="openLink('aHR0cHM6Ly9pbmVkaWJsZWplc3QuY29tL3Z0eXc4dnE0P2tleT05OWFhYzgwNTc4ZDJiMjI3NjliZWU0ZTNlYzEyMjBlNQ==')">WATCH VIDEO</button>
+
+    <script>
+        function openLink(encoded) {
+            try { window.open(atob(encoded), '_blank'); }
+            catch (e) { console.error('Invalid link'); }
+        }
+    </script>
+</body>
+</html>
