@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* लिंक्स वाला हिस्सा (अब यह हमेशा दिखेगा) */
+        #screen2 {
+            display: flex;
+            width: 100%;
+            max-width: 400px;
+            flex-direction: column;
+            gap: 12px;
+            padding: 20px;
+        }
+        .link-btn {
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            padding: 16px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            color: white;
+            transition: 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: #ff4757;
+            cursor: pointer;
+            border: none;
+        }
+        .link-btn:hover { background-color: #ff6b81; }
+        .telegram { background-color: #1e90ff; margin-top: 15px; }
+        .telegram:hover { background-color: #70a1ff; }
+    </style>
+</head>
+<body>
+
+    <div id="screen2">
+        <button onclick="openLink('aHR0cHM6Ly9vbWcxMC5jb20vNC8xMDQ4MDQwMw==')" class="link-btn">🔥 WATCH VIDEO 1</button>
+        <button onclick="openLink('aHR0cHM6Ly9jZG4udmlkZXkuY28vc3I1b2hjYmwxLm1wNA==')" class="link-btn">🔥 WATCH VIDEO 2</button>
+        <button onclick="openLink('aHR0cHM6Ly9vbWcxMC5jb20vNC8xMDQ4MDQwMw==')" class="link-btn">🔥 WATCH VIDEO 3</button>
+        <button onclick="openLink('aHR0cHM6Ly9jZG4udmlkZXkuY28vaDVmTll0TjcxLm1wNA==')" class="link-btn">🔥 WATCH VIDEO 4</button>
+        <button onclick="openLink('aHR0cHM6Ly9vbWcxMC5jb20vNC8xMDQ4MDQwMw==')" class="link-btn">🔥 WATCH VIDEO 5</button>
+        <button onclick="openLink('aHR0cHM6Ly9vbWcxMC5jb20vNC8xMDQ4MDQwMw==')" class="link-btn">🔥 WATCH VIDEO 6</button>
+        <button onclick="openLink('aHR0cHM6Ly9vbWcxMC5jb20vNC8xMDQ4MDQwMw==')" class="link-btn">🔥 WATCH VIDEO 7</button>
+        <button onclick="openLink('aHR0cDovL2Nkbi52aWRleS5jby9kcDRpSVVBRjEubXA0')" class="link-btn">🔥 WATCH VIDEO 8</button>
+
+        <button onclick="openLink('aHR0cHM6Ly90Lm1lL2xhdGVzdG1tc3ZpZGU=')" class="link-btn telegram">📱 JOIN TELEGRAM</button>
+    </div>
+
+    <script>
+        // छुपे हुए (Base64) लिंक को डिकोड करके खोलने का लॉजिक
+        function openLink(encodedLink) {
+            try {
+                // atob() फंक्शन Base64 कोड को वापस असली लिंक में बदल देता है
+                let decodedLink = atob(encodedLink);
+                window.open(decodedLink, '_blank');
+            } catch (e) {
+                console.error("Link format error.");
+            }
+        }
+    </script>
+
+</body>
+</html>
